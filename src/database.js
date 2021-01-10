@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-require('dotenv').config();
+
 const ATLAS_URI = process.env.ATLAS_URI ;
 
 const conectarDB = async () => {
@@ -17,5 +17,4 @@ const connection = mongoose.connection;
 connection.once('open', ()=> {
     console.log('Database connected');
 });
-
 
